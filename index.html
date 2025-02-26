@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Bikes</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="map.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <!-- Mapbox GL JS CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+    <script src="map.js" type="module"></script>
+
+    <!-- <header> -->
+        <h1>🚴🏼‍♀️ Data Bikes</h1>
+        <label style="margin-left: auto;">
+          Filter by time:
+          <input id="time-slider" type="range" min="-1" max="1440" value="-1" />
+          <time id="selected-time"></time>
+          <em id="any-time">(any time)</em>
+        </label>
+      <!-- </header> -->
+
+      <div class="project-description">
+        <h2>Boston Bike Traffic Visualization</h2>
+        <p>
+          An interactive map displaying bike traffic patterns in the Boston area. 
+          The map shows bike lanes, station activity, and traffic flow trends 
+          based on real data from March 2024.
+        </p>
+      </div>
+      
+      
+
+
 </head>
 <body>
-    <h1>>🚴🏼‍♀️ Data Bikes</h1>
+
+    <div id="map">
+        <svg></svg>
+    </div>
+
+      <div class="legend separate">
+        <span class="legend-label"></span>
+        <div class="legend-item" style="--departure-ratio: 1">
+          <span>More departures</span>
+        </div>
+        <div class="legend-item" style="--departure-ratio: 0.5">
+          <span>Balanced</span>
+        </div>
+        <div class="legend-item" style="--departure-ratio: 0">
+          <span>More arrivals</span>
+        </div>
+      </div>
+      
+      
+      
+
+    <!-- Mapbox GL JS JavaScript -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+
     
+
 </body>
 </html>
